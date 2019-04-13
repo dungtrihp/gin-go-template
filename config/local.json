@@ -1,6 +1,6 @@
 {
     "name":"local",
-    "backend_port":":4000",
+    "backend_port":":4002",
     "mysql":{
         "db_name":"test",
         "user":"root",
@@ -12,5 +12,12 @@
         "host":"localhost",
         "port":"6379",
         "password":"123456789"
-    } 
+    },
+    "minio":{
+        "host":"localhost:9000",
+        "access_key":"AKIAIOSFODNN7EXAMPLE",
+        "secret_key":"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
+        "bucket":"test",
+        "use_ssl":false
+    }
 }

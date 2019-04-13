@@ -1,16 +1,23 @@
 {
-    "name":"development",
-    "backend_port":":4000",
-    "mysql":{
-        "db_name":"test",
-        "user":"root",
-        "password":"123456",
-        "host":"localhost",
-        "port":"3306"
+    "name": "development",
+    "backend_port": ":4002",
+    "mysql": {
+        "db_name": "test",
+        "user": "root",
+        "password": "123456",
+        "host": "localhost",
+        "port": "3306"
     },
-    "redis":{
-        "host":"localhost",
-        "port":"6379",
-        "password":"123456789"
-    } 
+    "redis": {
+        "host": "localhost",
+        "port": "6379",
+        "password": "123456789"
+    },
+    "minio":{
+        "host":"localhost:9000",
+        "access_key":"AKIAIOSFODNN7EXAMPLE",
+        "secret_key":"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
+        "bucket":"test",
+        "use_ssl":false
+    }
 }

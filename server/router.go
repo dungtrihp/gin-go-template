@@ -20,6 +20,7 @@ func NewRouter() *gin.Engine {
 		cCustomer := new(controllers.CustomerController)
 		customerApi.GET("/", cCustomer.CheckRequest)
 		customerApi.POST("/refresh", cCustomer.CheckRequest)
+		customerApi.POST("/upload-file", cCustomer.Upload)
 	}
 
 	return router

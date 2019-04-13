@@ -3,10 +3,13 @@ package server
 import (
 	"log"
 	"start/config"
+	"start/datasources/myminio"
 )
 
 func Init() {
 	log.Println("server init")
+
+	myminio.Init()
 
 	config := config.GetConfig()
 	r := NewRouter()
