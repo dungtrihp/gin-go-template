@@ -14,6 +14,11 @@ import (
 
 func NewRouter() *gin.Engine {
 	router := gin.New()
+	router.GET("/", func(c *gin.Context) {
+		c.JSON(200, gin.H{"message": "Hello my template"})
+		c.Abort()
+		return
+	})
 	// ==========customer api
 	customerApi := router.Group("customers").Use(middlewares.VerifyJwtToken())
 	{
