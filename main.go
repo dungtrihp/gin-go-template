@@ -4,7 +4,6 @@ import (
 	"flag"
 	"log"
 	"start/config"
-	"start/datasources"
 	"start/server"
 )
 
@@ -23,12 +22,6 @@ func main() {
 	environmentVar := environment
 	log.Println("Env", *environmentVar)
 	log.Println("Is Testing", *isTesting)
-
-	// ============ Use redis
-	datasources.MyRedisConnect()
-	// ============ Use mysql
-	datasources.MySqlConnect(*isTesting)
-	server.MigrateDb(*isTesting)
 
 	// ============ Server init
 	server.Init()
